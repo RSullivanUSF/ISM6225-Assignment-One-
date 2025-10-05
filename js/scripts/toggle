@@ -1,0 +1,7 @@
+// Toggle "Show more / Show less" for About Us page
+document.getElementById('toggleMore').addEventListener('click', function () {
+  const p = document.getElementById('moreText');
+  const hidden = p.style.display === 'none';
+  p.style.display = hidden ? 'block' : 'none';
+  this.textContent = hidden ? 'Show less' : 'Show more';
+});
