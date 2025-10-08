@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Analytics | Keep Russ Busy</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Chart.js (allowed by your assignment) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>KEEP RUSS BUSY</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="managemishaps.html">Manage Mishaps</a>
+      <a href="analytics.html" aria-current="page">Analytics</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h2>Russ’s Annual Incident Report</h2>
+      <p class="meta">Mishaps by category (compiled from Keep Russ Busy archives — accuracy not guaranteed).</p>
+      <canvas id="mishapChart" height="120"></canvas>
+    </section>
+
+    <section class="card">
+      <h3>Severity Mix</h3>
+      <p class="meta">Share of Minor / Moderate / Full-Scale Chaos.</p>
+      <canvas id="severityChart" height="120"></canvas>
+    </section>
+  </main>
+
+  <footer class="wrap">© 2025 Keep Russ Busy Magazine</footer>
+
+  <!-- JavaScript file for the charts -->
+<script src="js/analytics.js"></script>
+</body>
+</html>

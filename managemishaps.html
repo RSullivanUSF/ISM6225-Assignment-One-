@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manage Mishaps | Keep Russ Busy</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>KEEP RUSS BUSY</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="managemishaps.html" aria-current="page">Manage Mishaps</a>
+      <a href="analytics.html">Analytics</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h2>Incident Logger (Mock CRUD)</h2>
+      <p class="meta">Data is in-memory only for grading purposes.</p>
+
+      <form id="mishapForm" style="margin-top:12px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div>
+            <label for="title">Mishap Title</label>
+            <input id="title" type="text" placeholder="e.g., The Great Chili Cook-Off Explosion" required>
+          </div>
+          <div>
+            <label for="category">Category</label>
+            <input id="category" type="text" placeholder="Home / Cooking / Pets / Outdoor / DIY" required>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+          <div>
+            <label for="severity">Severity</label>
+            <select id="severity" required>
+              <option value="Minor">Minor</option>
+              <option value="Moderate">Moderate</option>
+              <option value="Full-Scale Chaos">Full-Scale Chaos</option>
+            </select>
+          </div>
+          <div>
+            <label for="date">Date</label>
+            <input id="date" type="date" required>
+          </div>
+        </div>
+
+        <div style="margin-top:12px;">
+          <label for="lesson">Lesson Learned</label>
+          <input id="lesson" type="text" placeholder="Short takeaway (optional)">
+        </div>
+
+        <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
+          <button type="submit">Create</button>
+          <button type="button" id="updateBtn" disabled>Update</button>
+          <button type="button" id="deleteBtn" disabled>Delete</button>
+          <button type="button" id="clearBtn">Clear</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h3>Mishaps (Read)</h3>
+      <p class="meta">Click a row to load it for editing.</p>
+      <table id="mishapTable" style="width:100%;border-collapse:collapse;margin-top:10px;">
+        <thead>
+          <tr>
+            <th style="text-align:left;padding:8px;border-bottom:1px solid rgba(255,255,255,.15)">Title</th>
+            <th style="text-align:left;padding:8px;border-bottom:1px solid rgba(255,255,255,.15)">Category</th>
+            <th style="text-align:left;padding:8px;border-bottom:1px solid rgba(255,255,255,.15)">Severity</th>
+            <th style="text-align:left;padding:8px;border-bottom:1px solid rgba(255,255,255,.15)">Date</th>
+            <th style="text-align:left;padding:8px;border-bottom:1px solid rgba(255,255,255,.15)">Lesson</th>
+          </tr>
+        </thead>
+        <tbody id="mishapBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="wrap">© 2025 Keep Russ Busy Magazine</footer>
+
+  <!-- Page JS -->
+ <script src="js/mishaps.js"></script>
+</body>
+</html>
+
